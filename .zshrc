@@ -21,3 +21,13 @@ PROMPT+=" %# "
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PATH=$HOME/.brew/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
+
+function scc ()
+{
+    cc -g -o test test.c $1 -D BUFFER_SIZE=$2
+}
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
