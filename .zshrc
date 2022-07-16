@@ -35,4 +35,8 @@ function scc ()
 # check if docker running / if not open it 
 if (! docker images &> /dev/null); then
   echo "N" | bash ~/42toolbox/init_docker.sh
+while (! docker images &> /dev/null); do
+  echo "Waiting for Docker to launch..."
+  sleep 5
+done
 fi
