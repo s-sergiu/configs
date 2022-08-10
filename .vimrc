@@ -40,9 +40,19 @@ let g:netrw_winsize=80
 
 "remaps
 set termwinkey=<C-L>
-nnoremap <S-Tab> <C-W><C-W>
-tnoremap <S-Tab> <C-L><C-W>
+nnoremap <S-Tab> <C-W><S-W>
+tnoremap <S-Tab> <C-L><S-W>
 nnoremap <Tab> gt
 
 let g:user42 = 'ssergiu'
 let g:mail42 = 'ssergiu@student.42heilbronn.de'
+
+hi StatusLine ctermbg=cyan
+hi StatusLine ctermfg=black
+hi StatusLineNC ctermbg=24  
+hi StatusLineNC ctermfg=white
+
+hi StatusLineTerm ctermbg=cyan
+hi StatusLineTerm ctermfg=black
+hi StatusLineTermNC ctermbg=24
+hi StatusLineTermNC ctermfg=white

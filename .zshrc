@@ -1,10 +1,10 @@
-# enable colors in alpine
-if [[ "$OSTYPE" == "linux-musl"* ]]; then
-		alias ls='ls --color=auto'
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    alias ls='ls --color=auto'
+else 
+    alias ls='ls -G'
 fi
 
 # aliases
-alias ls='ls -G'
 alias ..="cd ..";
 alias ll="ls -l";
 alias l="ls -l";
@@ -26,17 +26,21 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export PATH=$HOME/.brew/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
-# compile shortcut
-function scc ()
-{
-    cc -g -o test test.c $1 -D BUFFER_SIZE=$2
-}
 
 # check if docker running / if not open it 
-if (! docker images &> /dev/null); then
-  echo "N" | bash ~/42toolbox/init_docker.sh
-while (! docker images &> /dev/null); do
-  echo "Waiting for Docker to launch..."
-  sleep 5
-done
+function docker_init () {
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    if (! docker images &> /dev/null); then
+      echo "N" | bash ~/42toolbox/init_docker.sh
+    while (! docker images &> /dev/null); do
+      echo "Waiting for Docker to launch..."
+      sleep 5
+    done
+    echo "Y" | docker container prune
+    fi
+fi
+}
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+docker_init &
 fi
