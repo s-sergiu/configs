@@ -4,10 +4,10 @@ set hlsearch
 syntax on
 
 "norm stuff
-set ts=4
-set sw=4
-set sts=4
-set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set noexpandtab
 set smartindent
 
 "colorscheme
@@ -48,11 +48,11 @@ let g:user42 = 'ssergiu'
 let g:mail42 = 'ssergiu@student.42heilbronn.de'
 
 hi StatusLine ctermbg=cyan
-hi StatusLine ctermfg=black
+hi StatusLine ctermfg=24
 hi StatusLineNC ctermbg=24  
 hi StatusLineNC ctermfg=white
 
 hi StatusLineTerm ctermbg=cyan
-hi StatusLineTerm ctermfg=black
+hi StatusLineTerm ctermfg=24
 hi StatusLineTermNC ctermbg=24
 hi StatusLineTermNC ctermfg=white
