@@ -2,13 +2,12 @@ set nocompatible
 set incsearch
 set hlsearch
 syntax on
+set autoindent
 
 "norm stuff
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set noexpandtab
-set smartindent
 
 "colorscheme
 color torte
@@ -44,9 +43,11 @@ nnoremap <S-Tab> <C-W><S-W>
 tnoremap <S-Tab> <C-L><S-W>
 nnoremap <Tab> gt
 
+"header settings
 let g:user42 = 'ssergiu'
 let g:mail42 = 'ssergiu@student.42heilbronn.de'
 
+"statusline color highlighting
 hi StatusLine ctermbg=cyan
 hi StatusLine ctermfg=24
 hi StatusLineNC ctermbg=24  
@@ -56,3 +57,9 @@ hi StatusLineTerm ctermbg=cyan
 hi StatusLineTerm ctermfg=24
 hi StatusLineTermNC ctermbg=24
 hi StatusLineTermNC ctermfg=white
+
+"setting for ctags 
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+"some weird error in vim9 when I cannot backspace in insert mode
+set backspace=2 

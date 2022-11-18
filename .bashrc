@@ -1,4 +1,4 @@
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ "$OSTYPE" == "archlinux"* ]]; then
     alias ls='ls --color=auto'
 else 
     alias ls='ls -G'
@@ -11,6 +11,9 @@ alias l="ls -l";
 alias la="ls -la";
 alias cl="clear";
 alias cc="cc -Werror -Wextra -Wall";
+
+# git alias
+alias gitlog="git log --pretty=oneline --abbrev-commit";
 
 ### customize PS1 and prompt
 
@@ -32,27 +35,11 @@ fi
 
 # env vars
 export CLICOLOR=1
+export GPG_TTY=$(tty)
 export LSCOLORS=GxFxCxDxBxegedabagaced
 export PATH=$HOME/.brew/bin:$PATH
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.Library/Python/3.9/bin:$PATH
-export PATH=$HOME/.brew/bin:$PATH
 
-
-# check if docker running / if not open it 
-function docker_init() {
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    if (! docker images &> /dev/null); then
-      echo "N" | bash ~/42toolbox/init_docker.sh
-    while (! docker images &> /dev/null); do
-      echo "Waiting for Docker to launch..."
-      sleep 5
-    done
-    echo "Y" | docker container prune
-    fi
-fi
-}
-
-if [[ "$OSTYPE" == "darwin" ]]; then
-docker_init &
-fi
+#export PATH=$HOME/.brew/bin:$PATH
+#export PATH=$HOME/.local/bin:$PATH
+#export PATH=/usr/local/bin:$PATH
+#export PATH=$HOME/.Library/Python/3.9/bin:$PATH
