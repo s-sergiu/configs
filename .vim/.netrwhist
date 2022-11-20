@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/ssergiu/so_long/src'
+let g:netrw_dirhist_5='/Users/ssergiu/Projects/so_long/src'
+let g:netrw_dirhist_4='/Users/ssergiu/Projects/fdf/src'
+let g:netrw_dirhist_3='/Users/ssergiu/Evals/minishell/pfuchs/src'
+let g:netrw_dirhist_2='/Users/ssergiu/Evals/minishell/pfuchs/lib/execute/src'
+let g:netrw_dirhist_1='/Users/ssergiu/Evals/minishell/pfuchs/lib/execute'
+let g:netrw_dirhist_0='/Users/ssergiu/Evals/minishell/pfuchs/lib'
+let g:netrw_dirhist_9='/Users/ssergiu/Evals/minishell/pfuchs'
+let g:netrw_dirhist_8='/Users/ssergiu/Evals/minishell/pfuchs/src'
+let g:netrw_dirhist_7='/Users/ssergiu/Projects/fdf/src'
