@@ -12,9 +12,17 @@ alias la="ls -la";
 alias cl="clear";
 alias cc="cc -Werror -Wextra -Wall";
 
-# git alias
-alias gitlog="git log --pretty=oneline --abbrev-commit";
+#!/bin/bash
 
+function gitloglive()
+{
+	while :
+	do
+		clear
+		git --no-pager log --graph --pretty=oneline --abbrev-commit --decorate --all $*
+		sleep 1
+	done
+}
 ### customize PS1 and prompt
 
 COLOR_OFF="\[\e[0m\]"
@@ -43,3 +51,4 @@ export PATH=$HOME/.brew/bin:$PATH
 #export PATH=$HOME/.local/bin:$PATH
 #export PATH=/usr/local/bin:$PATH
 #export PATH=$HOME/.Library/Python/3.9/bin:$PATH
+alias archlinux=/Users/ssergiu/configs/archlinux.sh
