@@ -1,30 +1,17 @@
-if [[ "$OSTYPE" == "archlinux"* ]]; then
+# Colored ls depending on architecture;
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     alias ls='ls --color=auto'
 else 
     alias ls='ls -G'
 fi
 
-# aliases
+# Aliases;
 alias ..="cd ..";
 alias ll="ls -l";
-alias l="ls -l";
 alias la="ls -la";
 alias cl="clear";
-alias cc="cc -Werror -Wextra -Wall";
 
-#!/bin/bash
-
-function gitloglive()
-{
-	while :
-	do
-		clear
-		git --no-pager log --graph --pretty=oneline --abbrev-commit --decorate --all $*
-		sleep 1
-	done
-}
-### customize PS1 and prompt
-
+# customize PS1 and prompt;
 COLOR_OFF="\[\e[0m\]"
 COLOR_RED="\[\e[1;31m\]"
 COLOR_GREEN="\[\e[1;32m\]"
@@ -41,14 +28,5 @@ then
 	unsetenv ()  { unset $*; }
 fi
 
-# env vars
-export CLICOLOR=1
+# Environment variables;
 export GPG_TTY=$(tty)
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export PATH=$HOME/.brew/bin:$PATH
-
-#export PATH=$HOME/.brew/bin:$PATH
-#export PATH=$HOME/.local/bin:$PATH
-#export PATH=/usr/local/bin:$PATH
-#export PATH=$HOME/.Library/Python/3.9/bin:$PATH
-alias archlinux=/Users/ssergiu/configs/archlinux.sh

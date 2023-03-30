@@ -60,6 +60,3 @@ hi StatusLineTermNC ctermfg=white
 
 "setting for ctags 
 set cscopequickfix=s-,c-,d-,i-,t-,e-
-
-"some weird error in vim9 when I cannot backspace in insert mode
-set backspace=2 
