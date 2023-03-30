@@ -1,0 +1,10 @@
+[Unit]
+Description=gammastep daemon
+After=dwl.service
+
+[Service]
+ExecStart=gammastep
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

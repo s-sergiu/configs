@@ -1,0 +1,9 @@
+[Unit]
+Description=dwl after login daemon
+After=getty.target
+
+[Service]
+ExecStart=%h/bin/dwl
+
+[Install]
+WantedBy=default.target
