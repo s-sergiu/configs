@@ -3,7 +3,7 @@ Description=dwl after login daemon
 After=getty.target
 
 [Service]
-ExecStart=%h/bin/dwl
+ExecStart=%h/.local/bin/dwl
 
 [Install]
 WantedBy=default.target

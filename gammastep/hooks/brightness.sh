@@ -1,11 +1,11 @@
 #!/bin/sh
-# Set brightness via xbrightness when redshift status changes
+# Set brightness via xbacklight when gammastep status changes
 
 # Set brightness values for each status.
 # Range from 1 to 100 is valid
 brightness_day=100
 brightness_transition=50
-brightness_night=30
+brightness_night=20
 # Set fps for smoooooth transition
 fps=1000
 # Adjust this grep to filter only the backlights you want to adjust
@@ -14,7 +14,7 @@ backlights=($(xbacklight -list | grep intel*))
 set_brightness() {
 	for backlight in "${backlights[@]}"
 	do
-		xbacklight -set $1 -fps $fps -ctrl $backlight &
+		sudo xbacklight -set $1 -fps $fps -ctrl $backlight &
 	done
 }
 
