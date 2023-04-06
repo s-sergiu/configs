@@ -1,0 +1,7 @@
+[commit]
+	gpgsign = true
+[user]
+	email = ssergiu@student.42heilbronn.de
+	name = Sergiu Ster
+[core]
+	editor = vim
