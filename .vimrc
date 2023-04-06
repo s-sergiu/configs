@@ -10,7 +10,7 @@ set shiftwidth=4
 set softtabstop=4
 
 "colorscheme
-color torte
+color delek
 
 "laststatus
 set laststatus=2

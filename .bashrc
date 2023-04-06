@@ -10,6 +10,9 @@ alias ..="cd ..";
 alias ll="ls -l";
 alias la="ls -la";
 alias cl="clear";
+alias reboot="systemctl reboot";
+alias poweroff="systemctl poweroff";
+alias suspend="systemctl suspend";
 
 # customize PS1 and prompt;
 COLOR_OFF="\[\e[0m\]"
@@ -30,3 +33,4 @@ fi
 
 # Environment variables;
 export GPG_TTY=$(tty)
+export PATH=$PATH:$HOME/.local/bin
