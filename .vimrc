@@ -8,6 +8,7 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set colorcolumn=80
 
 "colorscheme
 color delek
@@ -48,15 +49,18 @@ let g:user42 = 'ssergiu'
 let g:mail42 = 'ssergiu@student.42heilbronn.de'
 
 "statusline color highlighting
-hi StatusLine ctermbg=cyan
-hi StatusLine ctermfg=24
-hi StatusLineNC ctermbg=24  
-hi StatusLineNC ctermfg=white
+hi StatusLine ctermbg=185
+hi StatusLine ctermfg=0
+hi StatusLineNC ctermbg=189  
+hi StatusLineNC ctermfg=8
 
-hi StatusLineTerm ctermbg=cyan
-hi StatusLineTerm ctermfg=24
-hi StatusLineTermNC ctermbg=24
-hi StatusLineTermNC ctermfg=white
+hi StatusLineTerm ctermbg=185
+hi StatusLineTerm ctermfg=0
+hi StatusLineTermNC ctermbg=189
+hi StatusLineTermNC ctermfg=8
+
+"parenthesis matching color highlight
+hi MatchParen cterm=none ctermbg=143 ctermfg=20
 
 "setting for ctags 
 set cscopequickfix=s-,c-,d-,i-,t-,e-

@@ -13,6 +13,14 @@ alias cl="clear";
 alias reboot="systemctl reboot";
 alias poweroff="systemctl poweroff";
 alias suspend="systemctl suspend";
+alias vg="valgrind --leak-check=full \
+         --show-leak-kinds=all \
+		 --track-fds=yes";
+alias sanalysis="scan-build -V clang -c";
+alias gst="git status";
+alias cmake-build="cmake -S . -B build";
+alias make-build="make -C build";
+alias ctest-build="ctest --test-dir build";
 
 # customize PS1 and prompt;
 COLOR_OFF="\[\e[0m\]"
@@ -34,3 +42,5 @@ fi
 # Environment variables;
 export GPG_TTY=$(tty)
 export PATH=$PATH:$HOME/.local/bin
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
+export GTEST_COLOR=1
