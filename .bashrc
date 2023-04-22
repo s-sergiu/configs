@@ -41,6 +41,6 @@ fi
 
 # Environment variables;
 export GPG_TTY=$(tty)
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.brew/bin
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export GTEST_COLOR=1
