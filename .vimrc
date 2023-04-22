@@ -8,7 +8,6 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set colorcolumn=80
 
 "colorscheme
 color delek
@@ -24,6 +23,8 @@ set statusline+=\ %{strftime('%A-%H:%M')} " Time
 
 "screen configs
 set cursorline
+hi CursorLine ctermfg=green
+hi CursorLine ctermbg=black
 
 "basic configs (line number + fuzzy search);
 set nu
@@ -64,3 +65,4 @@ hi MatchParen cterm=none ctermbg=143 ctermfg=20
 
 "setting for ctags 
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+set backspace=2

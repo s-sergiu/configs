@@ -25,8 +25,8 @@ alias ctest-build="ctest --test-dir build";
 # customize PS1 and prompt;
 COLOR_OFF="\[\e[0m\]"
 COLOR_RED="\[\e[1;31m\]"
-COLOR_GREEN="\[\e[1;32m\]"
-COLOR_YELLOW="\[\e[1;33m\]"
+COLOR_GREEN="\[\e[1;34m\]"
+COLOR_YELLOW="\[\e[0;35m\]"
 COLOR_PURPLE="\[\e[1;35m\]"
 
 CHECK_MARK="$COLOR_GREEN\342\234\223"
@@ -41,6 +41,6 @@ fi
 
 # Environment variables;
 export GPG_TTY=$(tty)
-export PATH=$PATH:$HOME/.local/bin:$HOME/.brew/bin
+export PATH=$HOME/.local/bin:$HOME/.brew/bin/:$PATH
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export GTEST_COLOR=1
