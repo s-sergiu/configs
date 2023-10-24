@@ -10,7 +10,7 @@ set shiftwidth=4
 set softtabstop=4
 
 "colorscheme
-color delek
+color default
 
 "laststatus
 set laststatus=2
@@ -38,12 +38,6 @@ let g:netrw_browse_split=4
 let g:netrw_preview=1
 let g:netrw_liststyle=3
 let g:netrw_winsize=80
-
-"remaps
-set termwinkey=<C-L>
-nnoremap <S-Tab> <C-W><S-W>
-tnoremap <S-Tab> <C-L><S-W>
-nnoremap <Tab> gt
 
 "header settings
 let g:user42 = 'ssergiu'
