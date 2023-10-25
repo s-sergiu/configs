@@ -10,7 +10,6 @@ alias ..="cd ..";
 alias ll="ls -l";
 alias la="ls -la";
 alias cl="clear";
-	#Needs polkit
 alias reboot="systemctl reboot";
 alias poweroff="systemctl poweroff";
 alias suspend="systemctl suspend";

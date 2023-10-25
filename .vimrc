@@ -44,15 +44,15 @@ let g:user42 = 'ssergiu'
 let g:mail42 = 'ssergiu@student.42heilbronn.de'
 
 "statusline color highlighting
-hi StatusLine ctermbg=185
-hi StatusLine ctermfg=0
-hi StatusLineNC ctermbg=189  
-hi StatusLineNC ctermfg=8
+hi StatusLine ctermbg=yellow
+hi StatusLine ctermfg=yellow
+hi StatusLineNC ctermbg=cyan  
+hi StatusLineNC ctermfg=blue
 
-hi StatusLineTerm ctermbg=185
-hi StatusLineTerm ctermfg=0
-hi StatusLineTermNC ctermbg=189
-hi StatusLineTermNC ctermfg=8
+hi StatusLineTerm ctermbg=brown
+hi StatusLineTerm ctermfg=yellow
+hi StatusLineTermNC ctermbg=blue
+hi StatusLineTermNC ctermfg=cyan
 
 "parenthesis matching color highlight
 hi MatchParen cterm=none ctermbg=143 ctermfg=20
